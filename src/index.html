@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="bg-black">
+
+    <!-- Loading Screen -->
+    <div class="loading-screen fixed inset-0 flex justify-center items-center bg-black z-40 text-white">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+
+    <!-- Side Nav -->
+    <div class="side-nav-bar fixed top-0 min-h-screen flex z-50">
+        <div class="nav-tab text-white  p-4 bg-black flex flex-col justify-between">
+            <div class="nav-links">
+                <ul class="list-none">
+                    <li class="mb-5 cursor-pointer hover:text-gray-500 duration-200" id="search">Search</li>
+                    <li class="mb-5 cursor-pointer hover:text-gray-500 duration-200" id="categories">Categories</li>
+                    <li class="mb-5 cursor-pointer hover:text-gray-500 duration-200" id="areas">Area</li>
+                    <li class="mb-5 cursor-pointer hover:text-gray-500 duration-200" id="ingredients">Ingredients</li>
+                    <li class="mb-5 cursor-pointer hover:text-gray-500 duration-200" id="contact">Contact Us</li>
+                </ul>
+            </div>
+            <div class="nav-footer">
+                <div class="icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="footer">
+                    <p>Copyright Â© 2019 All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <div class="nav-header flex flex-col justify-between py-4 px-2 text-center bg-white">
+            <img src="imgs/logo.png" class="logo cursor-pointer" alt="logo">
+            <i class="fa-solid open-close-icon fa-2x fa-align-justify"></i>
+            <div>
+                <i class="fa-solid fa-globe"></i>
+                <br>
+                <i class="fa-solid fa-share-nodes"></i>
+
+            </div>
+        </div>
+
+    </div>
+
+     <!-- Search Page -->
+     <div class="searchPage container mx-auto w-3/4 hidden" id="searchContainer">
+        <div class="py-4 flex flex-wrap">
+            <div class="w-full md:w-1/2 p-2">
+                <input class="bg-transparent text-white w-full p-2 border border-gray-400 rounded" type="text" id="searchName" placeholder="Search By Name">
+            </div>
+            <div class="w-full md:w-1/2 p-2 mt-4 md:mt-0">
+                <input maxlength="1" class="bg-transparent text-white w-full p-2 border border-gray-400 rounded" id="searchLetter" type="text" placeholder="Search By First Letter">
+            </div>
+        </div>
+    </div>
+
+    <main class="ms-auto h-screen">
+            <div class="container mx-auto">
+
+                <div class="py-5 ms-5  text-white flex flex-wrap" id="myView">
+                    <!-- Content will be dynamically inserted here -->
+    
+                </div>
+            </div>
+    </main>
+
+    
+
+   
+
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./javaScript/mine.js"></script>
+
+</body>
+
+</html>

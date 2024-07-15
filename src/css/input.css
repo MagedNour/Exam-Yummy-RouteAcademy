@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-tab{
+    width: 280px;
+}
+
+.logo{
+    width: 50px;
+}
+
+.btn-disabled{
+    cursor: auto;
+}
+.btn-disabled:hover{
+    background-color: transparent !important;
+    color: red !important;
+}
