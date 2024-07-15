@@ -299,11 +299,14 @@ async function getIngredients() {
 
 function displayIng(ingArray) {
     for (let i = 0; i < ingArray.length; i++) {
-        let desc = ingArray[i].strDescription.split(" ").slice(0, 20).join(" ");
+        let desc = ingArray[i].strDescription;
+        if(desc != null){
+            desc= desc.split(" ").slice(0, 20).join(" ");
+        }
 
         $("#myView").append(`
         <div class="w-full md:w-1/4 p-8">
-        <div class="text-center ing" id= "${ingArray[i].strIngredient}">
+        <div class="cursor-pointer text-center ing" id= "${ingArray[i].strIngredient}">
         <i class="fa-solid fa-drumstick-bite fa-4x"></i>
                     <h3 class="mt-4">${ingArray[i].strIngredient}</h3>
                     <p>${desc}</p>
